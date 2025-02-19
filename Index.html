@@ -1,314 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<script type='text/javascript' src='//pl25239108.profitablecpmrate.com/32/9d/90/329d9066b0fef9d52415531037f59d82.js'></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Erath Coin</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <title>Ad Reward System</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            background-image: url('https://i.ibb.co/7tXj6WJN/file-202.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100vh;
             margin: 0;
+            padding: 0;
+            background-color: #121212;
             color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+        .container {
+            text-align: center;
+            background: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            width: 300px;
         }
-
-        #tapButton {
-            width: 150px;
-            height: 150px;
-            background-image: url('https://i.ibb.co/bR5nDNMC/file-201.jpg');
-            background-size: cover;
-            border: 5px solid #fff; /* White border around the tap button */
+        .container h1 {
+            font-size: 20px;
+            color: green;
+            margin-bottom: 10px;
+        }
+        .developer {
+            font-size: 12px;
+            background-color: green;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .stats {
+            margin: 10px 0;
+        }
+        .stats p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .progress-circle {
+            width: 80px;
+            height: 80px;
+            border: 4px solid green;
             border-radius: 50%;
-            cursor: pointer;
-            transition: transform 0.2s, opacity 0.3s, border 0.3s; /* Added border transition */
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 20px auto;
+            margin: 10px auto;
         }
-
-        #tapButton:hover {
-            opacity: 0.8;
-            transform: scale(1.1);
-            border-color: #ff5722; /* Change border color on hover */
-        }
-
-        #score, #task, #level {
-            font-size: 1.5em;
-            margin-top: 20px;
-        }
-
-        #buttonContainer {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
-
-        /* Style for buttons */
-        .buttonWithIcon {
-            font-size: 1.2em;
-            padding: 15px 30px;
-            color: white;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            min-width: 150px;
-            min-height: 50px;
-            margin: 10px;
+        .progress-circle span {
+            font-size: 18px;
             font-weight: bold;
         }
-
-        .buttonWithIcon:hover {
-            transform: translateY(-3px);
+        .buttons button {
+            width: 90%;
+            margin: 5px 0;
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background: green;
+            cursor: pointer;
         }
-
-        /* Refer Button Style */
-        #referButton {
-            background-color: #ff5722;
+        .buttons button:hover {
+            background: darkorange;
         }
-
-        #referButton:hover {
-            background-color: #e64a19;
-        }
-
-        /* Balance Button Style */
-        #balanceButton {
-            background-color: #2196f3;
-        }
-
-        #balanceButton:hover {
-            background-color: #1976d2;
-        }
-
-        /* Community Button Style */
-        #communityButton {
-            background-color: #4caf50;
-        }
-
-        #communityButton:hover {
-            background-color: #45a049;
-        }
-
-        /* Pages */
-        .page {
+        .withdraw-section {
+            margin-top: 20px;
             display: none;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: #2a2a2a;
             border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            max-width: 400px;
-            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
-
-        .backButton {
-            background-color: #ff5722;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            padding: 12px 25px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        .backButton:hover {
-            background-color: #e64a19;
-        }
-
-        .progress-container {
+        .withdraw-section input, .withdraw-section select {
             width: 100%;
-            background-color: #ddd;
+            padding: 12px;
+            margin: 8px 0;
             border-radius: 5px;
-            margin-top: 20px;
+            border: 2px solid #555;
+            background-color: #333;
+            color: #fff;
         }
-
-        .progress-bar {
-            height: 20px;
-            width: 0;
-            background-color: #4caf50;
-            text-align: center;
-            color: white;
-            line-height: 20px;
+        .withdraw-section input:focus, .withdraw-section select:focus {
+            border-color: green;
+            outline: none;
+        }
+        .withdraw-section button {
+            background-color: green;
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            margin-top: 15px;
             border-radius: 5px;
-            transition: width 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .withdraw-section button:hover {
+            background-color: #006400;
+        }
+        #withdraw-status {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .user-info {
+            margin: 10px 0;
+        }
+        .user-info p {
+            font-size: 14px;
+            margin: 5px 0;
         }
     </style>
+<link rel="me" href="https://www.blogger.com/profile/12615525391666988711" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+<link rel="me" href="https://www.blogger.com/profile/18369340732868072285" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
 </head>
 <body>
+    <div class="container">
+        <h1>Auto MoneTag Ads</h1>
+        <div class="developer" onclick="window.location.href='https://t.me/Xp_bot_makeing_tips">Developer by ᴏʙɪᴛᴏ ❟❛❟ ᴜᴄʜɪʜᴀ 朱</div>
+        
+        <!-- Display User Info -->
+        <div class="user-info">
+            <p>Welcome, <span id="user-name"></span></p>
+        </div>
 
-    <h1>Erath Coin</h1>
+        <div class="stats">
+            <p>Watched Ads: <span id="watched-ads">0</span></p>
+            <p>Earned Points: <span id="earned-points">0</span></p>
+        </div>
+        <div class="progress-circle">
+            <span id="ads-progress">0%</span>
+        </div>
+        <div class="buttons">
+            <button id="watch-ad-btn" onclick="watchAd()">Watch Ad</button>
+            <button id="auto-ad-btn" onclick="startAutoAds()">Auto Show Ads</button>
+            <button id="stop-auto-btn" onclick="stopAutoAds()">Stop Auto Ads</button>
+            <button id="withdraw-btn" onclick="showWithdrawForm()">Withdraw</button>
+        </div>
 
-    <div id="gameContainer">
-        <div id="game" style="display: block;">
-            <button id="tapButton" onclick="increaseScore()"></button>
-            <div id="score">Score: 0</div>
-            <div id="level">Level: Bronze</div>
-            <div id="task">Click the button to earn points!</div>
-
-            <div class="progress-container">
-                <div id="progressBar" class="progress-bar">0%</div>
-            </div>
-
-            <div id="buttonContainer">
-                <button class="buttonWithIcon" id="communityButton" onclick="goToCommunityPage()">
-                    <i class="fas fa-users"></i> Join Community
-                </button>
-                <button class="buttonWithIcon" id="referButton" onclick="goToReferPage()">
-                    <i class="fas fa-user-friends"></i> Refer a Friend
-                </button>
-                <button class="buttonWithIcon" id="balanceButton" onclick="goToBalancePage()">
-                    <i class="fas fa-wallet"></i> View Balance
-                </button>
-            </div>
+        <!-- Withdraw Section -->
+        <div class="withdraw-section" id="withdraw-section">
+            <h3 style="color: orange; margin-bottom: 15px;">Withdrawal Request</h3>
+            <input type="number" id="withdraw-amount" placeholder="Enter Points to Withdraw" />
+            <select id="payment-method">
+                <option value="bkash">Bkash</option>
+                <option value="nagad">Nagad</option>
+                <option value="manual">Manual</option>
+            </select>
+            <input type="text" id="withdraw-phone" placeholder="Enter Phone Number" />
+            <button onclick="withdrawPoints()">Withdraw</button>
+            <p id="withdraw-status"></p>
         </div>
     </div>
 
-    <!-- Community Page -->
-    <div id="communityPage" class="page fade-in">
-        <h2>Join Our Community</h2>
-        <p>Click the button below to join our official Telegram channel and get updates!</p>
-        <a href="https://t.me/ErathCommunity" target="_blank">
-            <button class="backButton">Join Now</button>
-        </a>
-        <button class="backButton" onclick="backToGame()">Back to Game</button>
-    </div>
-
-    <!-- Refer Page -->
-    <div id="referPage" class="page fade-in">
-        <h2>Refer a Friend</h2>
-        <button id="copyReferralButton" onclick="copyReferralLink()">Copy Referral Link</button>
-        <p id="referralMessage" style="color: green;"></p>
-        <p>Total Referrals: <span id="totalReferrals">0</span></p>
-        <p>Your Referrals: <span id="userReferrals">0</span></p>
-        <button class="backButton" onclick="backToGame()">Back to Game</button>
-    </div>
-
-    <!-- Balance Page -->
-    <div id="balancePage" class="page fade-in">
-        <h2>Your Balance</h2>
-        <p>Your current balance is <span id="balanceAmount">0</span> points!</p>
-        <button class="backButton" onclick="backToGame()">Back to Game</button>
-    </div>
+    <script src='//jagnaimsee.net/vignette.min.js' data-zone='8743924' data-sdk='show_8743924'></script>
 
     <script>
-        let score = 0;
-        let level = 1;
-        let balance = 0;
-        let taskCompletion = 0;
-        const maxLevel = 7;
-        let totalReferrals = 0;
-        let userReferrals = 0;
+        const MIN_WITHDRAW_POINTS = 5;
+        const ADMIN_USER_ID = 7149041455;
+        const BOT_TOKEN = "8128972912:AAEGt3c7jEJM-wYPvjQjC746WeAzmGx4_LA";
+        let watchedAdsCount = 0;
+        let earnedPoints = 0.00;
+        let autoAdInterval;
 
-        // Tap sound for each tap
-        const tapSound = new Audio('https://www.soundjay.com/button/beep-07.wav'); // Replace with your "earth" tap sound
+        // Simulate user name from Telegram User ID (replace with actual logic to get user info)
+        const telegramUserName = "@exampleUser"; // Replace this line with the actual logic to fetch username
+        document.getElementById("user-name").textContent = telegramUserName;
 
-        // Function to increase score and balance
-        function increaseScore() {
-            score++;
-            balance += 100; // Add 100 balance per tap
-            taskCompletion = Math.min((score / 100) * 100, 100);
+        // Check if user data is saved in localStorage
+        if (localStorage.getItem('watchedAdsCount')) {
+            watchedAdsCount = parseInt(localStorage.getItem('watchedAdsCount'));
+            earnedPoints = parseFloat(localStorage.getItem('earnedPoints'));
+            document.getElementById('watched-ads').textContent = watchedAdsCount;
+            document.getElementById('earned-points').textContent = earnedPoints.toFixed(2);
+        }
 
-            document.getElementById("score").textContent = "Score: " + score;
-            document.getElementById("progressBar").style.width = taskCompletion + "%";
-            document.getElementById("progressBar").textContent = taskCompletion + "%";
+        // Function to watch an ad and update stats
+        function watchAd() {
+            if (typeof show_8743924 === 'function') {
+                show_8743924().then(() => {
+                    // When the ad is shown, we add points
+                    watchedAdsCount++;
+                    document.getElementById('watched-ads').textContent = watchedAdsCount;
+                    earnedPoints += 0.50; // Add 0.50 points per ad watched
+                    document.getElementById('earned-points').textContent = earnedPoints.toFixed(2);
+                    localStorage.setItem('watchedAdsCount', watchedAdsCount);
+                    localStorage.setItem('earnedPoints', earnedPoints.toFixed(2));
 
-            if (taskCompletion === 100 && level < maxLevel) {
-                level++;
-                taskCompletion = 0;
-                score = 0;
-                document.getElementById("task").textContent = "Level Up! Task Completed!";
-                updateLevelName();
+                    // Update progress circle
+                    updateProgressCircle();
+                });
+            }
+        }
+
+        // Update progress circle based on watched ads
+        function updateProgressCircle() {
+            const percentage = (watchedAdsCount / 10) * 100;
+            document.getElementById('ads-progress').textContent = `${percentage}%`;
+        }
+
+        // Function to start auto showing ads
+        function startAutoAds() {
+            autoAdInterval = setInterval(watchAd, 5000); // Auto show ad every 5 seconds
+            document.getElementById('auto-ad-btn').disabled = true;
+            document.getElementById('stop-auto-btn').disabled = false;
+        }
+
+        // Function to stop auto ads
+        function stopAutoAds() {
+            clearInterval(autoAdInterval);
+            document.getElementById('auto-ad-btn').disabled = false;
+            document.getElementById('stop-auto-btn').disabled = true;
+        }
+
+        // Function to show withdraw form
+        function showWithdrawForm() {
+            document.getElementById('withdraw-section').style.display = 'block';
+        }
+
+        // Function to handle withdrawal
+        function withdrawPoints() {
+            const amount = document.getElementById('withdraw-amount').value;
+            const paymentMethod = document.getElementById('payment-method').value;
+            const phoneNumber = document.getElementById('withdraw-phone').value;
+
+            if (amount < MIN_WITHDRAW_POINTS) {
+                document.getElementById('withdraw-status').textContent = `Minimum withdrawal amount is ${MIN_WITHDRAW_POINTS} points.`;
+                return;
             }
 
-            if (level === maxLevel) {
-                document.getElementById("task").textContent = "Max Level Reached!";
+            if (amount > earnedPoints) {
+                document.getElementById('withdraw-status').textContent = `Insufficient balance. You have ${earnedPoints.toFixed(2)} points.`;
+                return;
             }
 
-            // Update balance display
-            document.getElementById("balanceAmount").textContent = balance;
+            // Subtract points from earnedPoints after successful withdrawal
+            earnedPoints -= parseFloat(amount);
+            document.getElementById('earned-points').textContent = earnedPoints.toFixed(2);
 
-            // Play tap sound
-            tapSound.play();
+            // Save the updated balance in localStorage
+            localStorage.setItem('earnedPoints', earnedPoints.toFixed(2));
+
+            // Send withdrawal request to admin via Telegram
+            const message = `Withdrawal Request from ${telegramUserName}:\nAmount: ${amount} points\nPayment Method: ${paymentMethod}\nPhone Number: ${phoneNumber}`;
+            sendWithdrawRequestToAdmin(message);
+
+            // Show success message
+            document.getElementById('withdraw-status').textContent = 'Withdrawal request sent successfully!';
+
+            // Clear form
+            document.getElementById('withdraw-amount').value = '';
+            document.getElementById('withdraw-phone').value = '';
         }
 
-        function updateLevelName() {
-            let levelName = "";
-            switch (level) {
-                case 1: levelName = "Bronze"; break;
-                case 2: levelName = "Silver"; break;
-                case 3: levelName = "Gold"; break;
-                case 4: levelName = "Platinum"; break;
-                case 5: levelName = "Diamond"; break;
-                case 6: levelName = "Master"; break;
-                case 7: levelName = "Legend"; break;
-                default: levelName = "Unknown"; break;
-            }
-            document.getElementById("level").textContent = "Level: " + levelName;
-        }
-
-        function goToCommunityPage() {
-            document.getElementById("game").style.display = "none";
-            document.getElementById("communityPage").style.display = "block";
-        }
-
-        function goToReferPage() {
-            document.getElementById("game").style.display = "none";
-            document.getElementById("referPage").style.display = "block";
-        }
-
-        function goToBalancePage() {
-            document.getElementById("game").style.display = "none";
-            document.getElementById("balancePage").style.display = "block";
-        }
-
-        function backToGame() {
-            document.getElementById("game").style.display = "block";
-            document.getElementById("communityPage").style.display = "none";
-            document.getElementById("referPage").style.display = "none";
-            document.getElementById("balancePage").style.display = "none";
-        }
-
-        function copyReferralLink() {
-            const referralLink = "https://t.me/erathcoinbot?start=YOURREFERRALCODE";
-            const tempInput = document.createElement("input");
-            tempInput.value = referralLink;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempInput);
-
-            document.getElementById("referralMessage").textContent = "Referral link copied! Share with friends.";
-
-            totalReferrals++;
-            userReferrals++;
-            document.getElementById("totalReferrals").textContent = totalReferrals;
-            document.getElementById("userReferrals").textContent = userReferrals;
-
-            // Add balance per referral
-            balance += 1000; // Add 1000 balance per successful referral
-            document.getElementById("balanceAmount").textContent = balance;
+        // Function to send withdrawal request to admin
+        function sendWithdrawRequestToAdmin(message) {
+            fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${ADMIN_USER_ID}&text=${encodeURIComponent(message)}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        console.log('Message sent to admin');
+                    }
+                })
+                .catch(error => console.error('Error sending message:', error));
         }
     </script>
-
 </body>
-</html>
+    </html>
